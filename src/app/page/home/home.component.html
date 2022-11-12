@@ -53,7 +53,8 @@
                 <div class="row">
 
                     <div class="col-lg-6 col-12">
-                        <img src="../../../assets/images/o.png" class="about-image
+                        <img src="../../../assets/images/o.png"
+                            class="about-image
                             img-fluid" alt="">
                     </div>
 
@@ -124,142 +125,11 @@
                         </div>
 
                         <div class="row pt-lg-5">
-                            <div class="col-lg-6 col-12">
-                                <div class="services-thumb">
-                                    <div class="d-flex flex-wrap
-                                        align-items-center border-bottom
-                                        mb-4 pb-3">
-                                        <h3 class="mb-0">
-                                            Websites
-                                        </h3>
-
-                                        <!-- <div class="services-price-wrap ms-auto">
-                                        <p class="services-price-text mb-0">$2,400</p>
-                                        <div class="services-price-overlay"></div>
-                                    </div> -->
-                                    </div>
-
-                                    <p>
-                                        Sites mordernos para empresas
-                                        que
-                                        querem ser diferencial e se
-                                        destacar
-                                        no
-                                        mercado.
-                                    </p>
-
-                                    <a href="#contato" class="custom-btn
-                                        custom-border-btn btn mt-3">
-                                        Saiba mais
-                                    </a>
-
-                                    <div class="services-icon-wrap
-                                        d-flex
-                                        justify-content-center
-                                        align-items-center">
-                                        <i class="services-icon
-                                            bi-globe"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-12">
-                                <div class="services-thumb
-                                    services-thumb-up">
-                                    <div class="d-flex flex-wrap
-                                        align-items-center border-bottom
-                                        mb-4 pb-3">
-                                        <h3 class="mb-0">Design</h3>
-                                        <!-- <div class="services-price-wrap ms-auto">
-                                        <p class="services-price-text mb-0">$1,200</p>
-                                        <div class="services-price-overlay"></div>
-                                    </div> -->
-                                    </div>
-
-                                    <p>
-                                        Prototipação de telas modernas
-                                        para
-                                        seu app ou website
-                                    </p>
-
-                                    <a href="#contato" class="custom-btn
-                                        custom-border-btn btn mt-3">
-                                        Saiba mais
-                                    </a>
-
-                                    <div class="services-icon-wrap
-                                        d-flex
-                                        justify-content-center
-                                        align-items-center">
-                                        <i class="services-icon
-                                            bi-lightbulb"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-12">
-                                <div class="services-thumb">
-                                    <div class="d-flex flex-wrap
-                                        align-items-center border-bottom
-                                        mb-4 pb-3">
-                                        <h3 class="mb-0">Ecommerce</h3>
-                                        <!-- <div class="services-price-wrap ms-auto">
-                                        <p class="services-price-text mb-0">$3,600</p>
-                                        <div class="services-price-overlay"></div>
-                                    </div> -->
-                                    </div>
-
-                                    <p>
-                                        Uma loja virtual propria para
-                                        seu
-                                        comercio vender seus produtos
-                                    </p>
-
-                                    <a href="#contato" class="custom-btn
-                                        custom-border-btn btn mt-3">
-                                        Saiba mais
-                                    </a>
-
-                                    <div class="services-icon-wrap
-                                        d-flex
-                                        justify-content-center
-                                        align-items-center">
-                                        <i class="services-icon
-                                            bi-shop"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6 col-12">
-                                <div class="services-thumb
-                                    services-thumb-up">
-                                    <div class="d-flex flex-wrap
-                                        align-items-center border-bottom
-                                        mb-4 pb-3">
-                                        <h3 class="mb-0">Mobile</h3>
-                                    </div>
-
-                                    <p>
-                                        Aplicativos moveis com
-                                        interfaces e
-                                        funcionalidades incriveis
-                                    </p>
-
-                                    <a href="javascript:void();"
-                                        class="custom-btn
-                                        custom-border-btn
-                                        btn mt-3">
-                                        Saiba mais
-                                    </a>
-
-                                    <div class="services-icon-wrap
-                                        d-flex
-                                        justify-content-center
-                                        align-items-center">
-                                        <i class="services-icon
-                                            bi-phone"></i>
-                                    </div>
-                                </div>
+                            <div class="col-lg-6 col-12" *ngFor="let serv of
+                                servicos">
+                                <app-card-servico [titulo]="serv.titulo"
+                                    [descricao]="serv.descricao"
+                                    [href]="serv.href" [icon]="serv.icon"></app-card-servico>
                             </div>
                         </div>
                     </div>
@@ -287,46 +157,19 @@
 
                     <div class="clearfix"></div>
 
-                    <div class="col-lg-4 col-md-6 col-12">
+                    <div class="col-lg-4 col-md-6 col-12" *ngFor="let proj of
+                        projetos">
                         <div class="projects-thumb">
                             <div class="projects-info">
-                                <small class="projects-tag">Em breve</small>
-                                <h3 class="projects-title">Em breve</h3>
+                                <small class="projects-tag">{{proj.tag}}</small>
+                                <h3 class="projects-title">{{proj.titulo}}</h3>
                             </div>
 
-                            <a href="../../../assets/images/projects/em_breve.jpg"
+                            <a
+                                href="{{proj.imagem}}"
                                 class="popup-image">
-                                <img src="../../../assets/images/projects/em_breve.jpg"
-                                    class="projects-image img-fluid"
-                                    alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Em breve</small>
-                                <h3 class="projects-title">Em breve</h3>
-                            </div>
-
-                            <a href="../../../assets/images/projects/em_breve.jpg"
-                                class="popup-image">
-                                <img src="../../../assets/images/projects/em_breve.jpg"
-                                    class="projects-image img-fluid"
-                                    alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="projects-thumb">
-                            <div class="projects-info">
-                                <small class="projects-tag">Em breve</small>
-                                <h3 class="projects-title">Em breve</h3>
-                            </div>
-
-                            <a href="../../../assets/images/projects/em_breve.jpg"
-                                class="popup-image">
-                                <img src="../../../assets/images/projects/em_breve.jpg"
+                                <img
+                                    src="{{proj.imagem}}"
                                     class="projects-image img-fluid"
                                     alt="">
                             </a>
@@ -505,133 +348,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="row contact-info mb-1">
-                    <div class="col-lg-6 col-md-6 col-12 pe-lg-0">
-                        <div class="contact-info
-                            contact-info-border-start
-                            d-flex flex-column">
-                            <strong class="site-footer-title d-block
-                                mb-3">
-                                Serviços
-                            </strong>
-
-                            <ul class="footer-menu">
-                                <li class="footer-menu-item">
-                                    <a href="#"
-                                        class="footer-menu-link">
-                                        Websites
-                                    </a>
-                                </li>
-
-                                <li class="footer-menu-item">
-                                    <a href="#"
-                                        class="footer-menu-link">
-                                        Ecommerce
-                                    </a>
-                                </li>
-
-                                <li class="footer-menu-item">
-                                    <a href="#"
-                                        class="footer-menu-link">
-                                        Design
-                                    </a>
-                                </li>
-
-                                <li class="footer-menu-item">
-                                    <a href="#"
-                                        class="footer-menu-link">
-                                        Mobile
-                                    </a>
-                                </li>
-                            </ul>
-
-                            <strong class="site-footer-title d-block
-                                mt-4
-                                mb-3">
-                                Conecte-se comigo
-                            </strong>
-
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a target="_blank"
-                                        href="https://github.com/gui1535"
-                                        class="social-icon-link
-                                        bi-github"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a
-                                        href="mailto:guilherme.araujo153@gmail.com"
-                                        class="social-icon-link
-                                        bi-envelope-fill"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a target="_blank"
-                                        href="https://api.whatsapp.com/send?phone=5511945221351&text=Ol%C3%A1%20Guilherme%2C%20vi%20seu%20contato%20no%20seu%20website"
-                                        class="social-icon-link
-                                        bi-whatsapp"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a target="_blank"
-                                        href="www.linkedin.com/in/guilhermearaujo1"
-                                        class="social-icon-link
-                                        bi-linkedin"></a>
-                                </li>
-                            </ul>
-
-                            <strong class="site-footer-title d-block
-                                mt-4
-                                mb-3">
-                                Iniciar um projeto
-                            </strong>
-
-                            <p class="mb-0">
-                                Estou disponivel para projetos freelance
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-12 ps-lg-0">
-                        <div class="contact-info d-flex flex-column">
-                            <strong class="site-footer-title d-block
-                                mb-3">
-                                Sobre
-                            </strong>
-
-                            <p class="mb-2">
-                                Sou desenvolvedor web e estou disposto a
-                                ajudar no que precisar, contate-me
-                            </p>
-
-                            <strong class="site-footer-title d-block
-                                mt-4
-                                mb-3">
-                                Email
-                            </strong>
-
-                            <p class="mb-2">
-                                <a
-                                    href="mailto:guilherme.araujo1535@gmail.com">
-                                    guilherme.araujo1535@gmail.com
-                                </a>
-                            </p>
-
-                            <strong class="site-footer-title d-block
-                                mt-4
-                                mb-3">
-                                Telefone / Whatsapp
-                            </strong>
-
-                            <p class="mb-2">
-                                <a href="tel:5511945221351">
-                                    +55 11 94522-1351
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <app-footer></app-footer>
             </div>
 
         </section>
