@@ -202,9 +202,7 @@
         <div class="row justify-content-md-center mb-5">
           <div class="col-lg-9 col-12 mt-lg-0">
             <form
-              action="http://api.guicode.com.br"
               id="form_contato"
-              method="POST"
               (submit)="submitContato()"
               class="custom-form contact-form"
               role="form"
@@ -213,7 +211,7 @@
                 <p>Dados para contato</p>
                 <div class="col-lg-6 col-md-6 col-12">
                   <div class="form-floating">
-                    <input
+                    <input 
                       type="text"
                       name="nome"
                       id="nome"
