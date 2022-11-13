@@ -889,7 +889,7 @@ strong {
 
 .custom-form .form-control:hover,
 .custom-form .form-control:focus {
-  background: transparent;
+  /* background: transparent; */
   border-color: var(--cor-secundaria);
 }
 
@@ -907,12 +907,9 @@ strong {
   margin-bottom: 0;
 }
 
-.custom-form button[type="submit"]:hover,
-.custom-form button[type="submit"]:focus {
-  background: var(--cor-primaria);
-  border-color: transparent;
+.custom-form button[disabled] {
+  background: #14b78985;
 }
-
 
 /*---------------------------------------
   SITE FOOTER              
